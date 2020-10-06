@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Media;
 
 namespace KwikEMart
 {
@@ -59,11 +60,15 @@ namespace KwikEMart
                 }
                 else
                 {
+                    DateTime fechaHora = new DateTime();
+                    fechaHora = DateTime.Now;
                     int idCliente = cmbClientes.SelectedIndex;
                     int nroCompra = Comercio.RegistrarNuevaCompra(int.Parse(datosEmpleado[0]), idCliente, Comercio.Carrito);
                     int nroEnvio;
                     StreamWriter sw = File.CreateText($"Ticket Nro{nroCompra}.txt");
                     sw.WriteLine("Kwik-E-Mart - Recibo X");
+                    sw.WriteLine("---------------------------");
+                    sw.WriteLine($"{fechaHora}");
                     sw.WriteLine("---------------------------");
                     sw.WriteLine($"Cliente Nro{idCliente}");
                     sw.WriteLine("---------------------------");
@@ -100,6 +105,8 @@ namespace KwikEMart
                     sw.WriteLine("---------------------------");
                     sw.Close();
                     System.Diagnostics.Process.Start($"Ticket Nro{nroCompra}.txt");
+                    SoundPlayer sp = new SoundPlayer($"{path}\\resources\\audio\\CompraFinalizada.wav");
+                    sp.Play();
                     MessageBox.Show($"Gracias, vuelva prontossss!");
             Close();
 
