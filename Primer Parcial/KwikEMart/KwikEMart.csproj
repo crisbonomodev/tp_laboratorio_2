@@ -160,20 +160,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\apu.jpg" />
-    <Content Include="resources\bart.jpg" />
-    <Content Include="resources\default.jpg" />
-    <Content Include="resources\homero.jpg" />
-    <Content Include="resources\kwikemartlogo.jpg" />
-    <Content Include="resources\lisa.jpg" />
-    <None Include="resources\logo.jpg" />
-    <None Include="resources\logo.png" />
-    <Content Include="resources\maggie.jpg" />
-    <Content Include="resources\marge.jpg" />
-    <Content Include="resources\sanjay.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="data\productos.csv" />
+    <None Include="bin\Debug\resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

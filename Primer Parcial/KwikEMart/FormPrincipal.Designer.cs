@@ -37,6 +37,7 @@
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvStock = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.Subtotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.enviosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,6 +123,13 @@
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // enviosToolStripMenuItem
+            // 
+            this.enviosToolStripMenuItem.Name = "enviosToolStripMenuItem";
+            this.enviosToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.enviosToolStripMenuItem.Text = "Envios";
+            this.enviosToolStripMenuItem.Click += new System.EventHandler(this.enviosToolStripMenuItem_Click);
             // 
             // dgvStock
             // 
@@ -273,13 +280,6 @@
             this.label1.Size = new System.Drawing.Size(261, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Carrito - Seleccione el producto y haga click en Quitar";
-            // 
-            // enviosToolStripMenuItem
-            // 
-            this.enviosToolStripMenuItem.Name = "enviosToolStripMenuItem";
-            this.enviosToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.enviosToolStripMenuItem.Text = "Envios";
-            this.enviosToolStripMenuItem.Click += new System.EventHandler(this.enviosToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
