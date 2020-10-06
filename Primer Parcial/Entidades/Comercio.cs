@@ -14,6 +14,8 @@ namespace Entidades
         private static List<Empleado> sesion;
         private static List<Compra> compras;
         private static List<Cliente> clientes;
+        private static List<EnvioRetLocal> listaRetiraLocal;
+        private static List<EnvioADomicilio> listaEnvioDomicilio;
 
         #endregion
 
@@ -26,6 +28,8 @@ namespace Entidades
             compras = new List<Compra>();
             clientes = new List<Cliente>();
             sesion = new List<Empleado>();
+            listaRetiraLocal = new List<EnvioRetLocal>();
+            listaEnvioDomicilio = new List<EnvioADomicilio>();
         }
 
         #endregion
@@ -63,6 +67,23 @@ namespace Entidades
                 return sesion;
             }
         }
+
+        public static List<EnvioADomicilio> EnvioADomicilio
+        {
+            get
+            {
+                return listaEnvioDomicilio;
+            }
+        }
+
+        public static List<EnvioRetLocal> EnvioRetLocal
+        {
+            get 
+            {
+                return listaRetiraLocal;
+            }
+        }
+
 
 
         #endregion
@@ -229,12 +250,26 @@ namespace Entidades
 
         #endregion
 
+        #region Operaciones con envio
+
+        public static void AgregarRetiroEnLocal(EnvioRetLocal envio)
+        {
+            listaRetiraLocal.Add(envio);
+        }
+
+        public static void AgregarEnvioDomicilio(EnvioADomicilio envio)
+        {
+            listaEnvioDomicilio.Add(envio);
+        }
+
+        #endregion
+
         #region Operaciones de compra
         /// <summary>
         /// Registrar nueva compra
         /// </summary>
         /// <param name="nuevaCompra"></param>
-        public static void RegistrarNuevaCompra(int idVendedor,int idCliente,List<Producto> carrito)
+        public static int RegistrarNuevaCompra(int idVendedor,int idCliente,List<Producto> carrito)
         {
             double acumSubtotal = 0;
             double descuento = 0;
@@ -269,6 +304,7 @@ namespace Entidades
                 }
 
             }
+            return nroCompra;
         }
         /// <summary>
         /// Busca una compra por ID y retorna el listado de productos asociados

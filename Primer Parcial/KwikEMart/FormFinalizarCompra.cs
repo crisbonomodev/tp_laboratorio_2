@@ -7,14 +7,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace KwikEMart
 {
     public partial class FormFinalizarCompra : Form
     {
+        string path;
         double subTotal;
         double descuento;
+        double envio;
         double total;
         string[] datosEmpleado = new string[3];
         public FormFinalizarCompra()
@@ -24,6 +27,7 @@ namespace KwikEMart
 
         private void FormFinalizarCompra_Load(object sender, EventArgs e)
         {
+            path = Directory.GetCurrentDirectory();
             datosEmpleado = Comercio.ChequearLogin();
             lblDataApellidoVendedor.Text = datosEmpleado[1];
             lblDataNombreVendedor.Text = datosEmpleado[2];
@@ -31,27 +35,75 @@ namespace KwikEMart
             dgvCarrito.DataSource = Comercio.Carrito;
             dgvCarrito.AutoResizeColumns();
             CargarClientesEnCombobox();
-            subTotal = Comercio.CalcularSubtotal();
+            cmbEnvio.Items.Add(Envio.tipoEnvio.Domicilio);
+            cmbEnvio.Items.Add(Envio.tipoEnvio.RetiraEnLocal);
             descuento = 0;
-            total = subTotal - descuento;
+            envio = 0;
+            CalcularTotal();
+            total = subTotal + envio - descuento;
             lblSubtotalData.Text = subTotal.ToString();
             lblTotalData.Text = total.ToString();
         }
 
         private void btnRealizarCompra_Click(object sender, EventArgs e)
         {
-            if (cmbClientes.SelectedItem == null)
+            if (cmbClientes.SelectedItem == null || txtPersonaResponsable.Text == null)
             {
-                MessageBox.Show("Seleccione un cliente");
+                MessageBox.Show("Revise los datos faltantes.");
             }
             else
             {
-
-            int idCliente = cmbClientes.SelectedIndex;
-
-            Comercio.RegistrarNuevaCompra(int.Parse(datosEmpleado[0]), idCliente, Comercio.Carrito);
-            MessageBox.Show("Gracias, vuelva prontossss!");
+                if (cmbEnvio.SelectedIndex == 0 && (txtCalle.Text == null || txtAltura.Text == null))
+                {
+                    MessageBox.Show("Revise los datos faltantes.");
+                }
+                else
+                {
+                    int idCliente = cmbClientes.SelectedIndex;
+                    int nroCompra = Comercio.RegistrarNuevaCompra(int.Parse(datosEmpleado[0]), idCliente, Comercio.Carrito);
+                    int nroEnvio;
+                    StreamWriter sw = File.CreateText($"Ticket Nro{nroCompra}.txt");
+                    sw.WriteLine("Kwik-E-Mart - Recibo X");
+                    sw.WriteLine("---------------------------");
+                    sw.WriteLine($"Cliente Nro{idCliente}");
+                    sw.WriteLine("---------------------------");
+                    sw.WriteLine("Producto Nro Descripcion Cantidad PrecioU Subtotal");
+                    foreach (Producto item in Comercio.Carrito)
+                    {
+                        sw.WriteLine($"{item.NroProducto} {item.Descripcion} {item.Cantidad} {item.Precio} {item.Subtotal}");
+                    }
+                    switch (cmbEnvio.SelectedIndex)
+                {
+                    case 0:
+                            nroEnvio = Comercio.EnvioADomicilio.Count;
+                            EnvioADomicilio aDomicilio = new EnvioADomicilio(nroEnvio, nroCompra, txtPersonaResponsable.Text, txtCalle.Text, int.Parse(txtAltura.Text),envio);
+                            Comercio.AgregarEnvioDomicilio(aDomicilio);
+                            sw.WriteLine($"Envio: {envio}");
+                            sw.WriteLine(aDomicilio.ObtenerEnvio());
+                        break;
+                    case 1:
+                            nroEnvio = Comercio.EnvioRetLocal.Count;
+                            EnvioRetLocal retiraEnLocal = new EnvioRetLocal(nroEnvio, nroCompra, txtPersonaResponsable.Text);
+                            Comercio.AgregarRetiroEnLocal(retiraEnLocal);
+                            sw.WriteLine($"Envio: {envio}");
+                            sw.WriteLine(retiraEnLocal.ObtenerEnvio());
+                            break;
+                    default:
+                        break;
+                }
+                    sw.WriteLine("---------------------------");
+                    sw.WriteLine($"Subtotal: {subTotal}");
+                    sw.WriteLine($"Descuentos: {descuento}");
+                    sw.WriteLine($"Total: {total}");
+                    sw.WriteLine("---------------------------");
+                    sw.WriteLine("Gracias, vuelva prontossss!");
+                    sw.WriteLine("---------------------------");
+                    sw.Close();
+                    System.Diagnostics.Process.Start($"Ticket Nro{nroCompra}.txt");
+                    MessageBox.Show($"Gracias, vuelva prontossss!");
             Close();
+
+                }
             }
         }
 
@@ -90,10 +142,40 @@ namespace KwikEMart
                 descuento = 0;
                 lblDescuentosData.Text = descuento.ToString();
             }
-            total = subTotal - descuento;
+            CalcularTotal();
             lblSubtotalData.Text = subTotal.ToString();
             lblTotalData.Text = total.ToString();
 
+        }
+
+        private void cmbEnvio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEnvio.SelectedIndex == 0)
+            {
+                envio = 100;
+                lblEnvio.Text = "Recibe:";
+                txtCalle.Enabled = true;
+                txtAltura.Enabled = true;
+            }
+            else
+            {
+                lblEnvio.Text = "Retira:";
+                envio = 0;
+                txtCalle.Enabled = false;
+                txtAltura.Enabled = false;
+            }
+            CalcularTotal();
+            lblEnvioData.Text = envio.ToString();
+            lblSubtotalData.Text = subTotal.ToString();
+            lblTotalData.Text = total.ToString();
+        }
+
+        private double CalcularTotal()
+        {
+            subTotal = Comercio.CalcularSubtotal();
+
+            total = subTotal + envio - descuento;
+            return total;
         }
     }
 }

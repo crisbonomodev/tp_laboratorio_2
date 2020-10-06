@@ -52,6 +52,7 @@
             this.Subtotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.enviosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,7 +65,8 @@
             this.controlDeInventarioToolStripMenuItem,
             this.empleadosToolStripMenuItem,
             this.comprasToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.enviosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -272,6 +274,13 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Carrito - Seleccione el producto y haga click en Quitar";
             // 
+            // enviosToolStripMenuItem
+            // 
+            this.enviosToolStripMenuItem.Name = "enviosToolStripMenuItem";
+            this.enviosToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.enviosToolStripMenuItem.Text = "Envios";
+            this.enviosToolStripMenuItem.Click += new System.EventHandler(this.enviosToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -331,6 +340,7 @@
         private System.Windows.Forms.ColumnHeader Subtotal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem enviosToolStripMenuItem;
     }
 }
 

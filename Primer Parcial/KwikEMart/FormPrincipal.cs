@@ -217,5 +217,11 @@ namespace KwikEMart
             e.NewWidth = 80;
 
         }
+
+        private void enviosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEnvios formEnvios = new FormEnvios();
+            formEnvios.ShowDialog();
+        }
     }
 }

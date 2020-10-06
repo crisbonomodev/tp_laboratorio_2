@@ -18,3 +18,24 @@ C:\Users\Cristian\source\repos\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.Form
 C:\Users\Cristian\source\repos\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormHistorialCompras.resources
 C:\Users\Cristian\source\repos\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormNuevoCliente.resources
 C:\Users\Cristian\source\repos\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormClientes.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\bin\Debug\KwikEMart.exe.config
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\bin\Debug\KwikEMart.exe
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\bin\Debug\KwikEMart.pdb
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\bin\Debug\Entidades.dll
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\bin\Debug\Entidades.pdb
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.csprojAssemblyReference.cache
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormClientes.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormNuevoCliente.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormEmpleados.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormFinalizarCompra.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormHistorialCompras.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormInventario.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormPrincipal.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormLogin.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.Properties.Resources.resources
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.csproj.GenerateResource.cache
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.csproj.CoreCompileInputs.cache
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.csproj.CopyComplete
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.exe
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.pdb
+D:\Cristian Bonomo\UTN\Programacion 2\TP-02-Cascara\Primer Parcial\KwikEMart\obj\Debug\KwikEMart.FormEnvios.resources
