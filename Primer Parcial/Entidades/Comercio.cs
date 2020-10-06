@@ -279,17 +279,17 @@ namespace Entidades
 
             foreach (Producto producto in listaAGuardar)
             {
-                acumSubtotal += producto.Subtotal;
+                acumSubtotal = Math.Round(acumSubtotal + producto.Subtotal,2);
             }
 
             Cliente clienteRegistrado = ObtenerClientePorId(idCliente);
 
             if (VerificarDescuentoPorApellido(clienteRegistrado))
             {
-                descuento = acumSubtotal * 0.13;
+                descuento = Math.Round(acumSubtotal * 0.13,2);
             }
 
-            total = acumSubtotal - descuento;
+            total = Math.Round(acumSubtotal - descuento,2);
             Compra nuevaCompra = new Compra(nroCompra, idVendedor, idCliente, listaAGuardar, acumSubtotal,descuento,total);
             compras.Add(nuevaCompra);
 

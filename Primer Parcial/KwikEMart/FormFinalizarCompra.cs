@@ -42,8 +42,8 @@ namespace KwikEMart
             envio = 0;
             CalcularTotal();
             total = subTotal + envio - descuento;
-            lblSubtotalData.Text = subTotal.ToString();
-            lblTotalData.Text = total.ToString();
+            lblSubtotalData.Text = subTotal.ToString("#.##");
+            lblTotalData.Text = total.ToString("#.##");
         }
 
         private void btnRealizarCompra_Click(object sender, EventArgs e)
@@ -144,21 +144,27 @@ namespace KwikEMart
             if (esSimpson)
             {
                 descuento = subTotal * 0.13;
-                lblDescuentosData.Text = descuento.ToString();
+                lblDescuentosData.Text = descuento.ToString("#.##");
             }
             else
             {
                 descuento = 0;
-                lblDescuentosData.Text = descuento.ToString();
+                lblDescuentosData.Text = descuento.ToString("#.##");
             }
             CalcularTotal();
-            lblSubtotalData.Text = subTotal.ToString();
-            lblTotalData.Text = total.ToString();
+            lblSubtotalData.Text = subTotal.ToString("#.##");
+            lblTotalData.Text = total.ToString("#.##");
 
         }
 
         private void cmbEnvio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbClientes.SelectedIndex == -1) 
+            {
+                MessageBox.Show("Seleccione un cliente para configurar el envío");
+            }
+            else
+            {
             txtPersonaResponsable.Text = cmbClientes.SelectedItem.ToString();
             if (cmbEnvio.SelectedIndex == 0)
             {
@@ -178,9 +184,11 @@ namespace KwikEMart
                 txtPersonaResponsable.Enabled = false;
             }
             CalcularTotal();
-            lblEnvioData.Text = envio.ToString();
-            lblSubtotalData.Text = subTotal.ToString();
-            lblTotalData.Text = total.ToString();
+            lblEnvioData.Text = envio.ToString("#.##");
+            lblSubtotalData.Text = subTotal.ToString("#.##");
+            lblTotalData.Text = total.ToString("#.##");
+
+            }
         }
 
         private double CalcularTotal()

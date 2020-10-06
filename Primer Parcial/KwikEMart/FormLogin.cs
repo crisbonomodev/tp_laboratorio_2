@@ -48,7 +48,7 @@ namespace KwikEMart
             {
                 var linea = reader.ReadLine();
                 string[] values = linea.Split(',');
-                Producto itemACargar = new Producto(int.Parse(values[0]), values[1], double.Parse(values[2]), int.Parse(values[3]));
+                Producto itemACargar = new Producto(int.Parse(values[0]), values[1], Math.Round(double.Parse(values[2]),2), int.Parse(values[3]));
                 Comercio.Inventario.Add(itemACargar);
             }
             prgBarLoading.Value = 30;
@@ -75,7 +75,7 @@ namespace KwikEMart
                     idProductoRandom = random.Next(1, 30);
                     productoEjemplo = Comercio.ObtenerProductoPorId(idProductoRandom);
                     productoEjemplo.Cantidad = random.Next(1, 4);
-                    productoEjemplo.Subtotal = productoEjemplo.Cantidad * productoEjemplo.Precio;
+                    productoEjemplo.Subtotal = Math.Round(productoEjemplo.Cantidad * productoEjemplo.Precio,2);
                     listaEjemplo.Add(productoEjemplo);
                 }
                 int idCliente = random.Next(0, 3);

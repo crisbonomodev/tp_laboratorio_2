@@ -26,7 +26,7 @@ namespace Entidades
         public Producto(int nroProducto, string descripcion, double precio, int cantidad, double subtotal)
             :this(nroProducto,descripcion,precio,cantidad)
         {
-            this.subtotal = precio * cantidad;
+            this.subtotal = Math.Round(precio * cantidad,2);
         }
 
         public int NroProducto 

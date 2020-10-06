@@ -82,7 +82,7 @@ namespace KwikEMart
                     }
 
                 }
-                lblNroSubtotal.Text = acumuladorSubtotal.ToString();
+                lblNroSubtotal.Text = acumuladorSubtotal.ToString("#.##");
                 ActualizarCarrito();
             }
         }
@@ -106,7 +106,7 @@ namespace KwikEMart
                         Comercio.AgregarProductoAInventario(nroProducto,1);
                         ActualizarInventario();
                     }
-                lblNroSubtotal.Text = acumuladorSubtotal.ToString();
+                lblNroSubtotal.Text = acumuladorSubtotal.ToString("#.##");
                 ActualizarCarrito();
             }
         }
@@ -150,7 +150,7 @@ namespace KwikEMart
         private void CargarInventario()
         {
             inventarioCopia = (Comercio.Inventario as IEnumerable<Producto>).ToList();
-            lblNroSubtotal.Text = acumuladorSubtotal.ToString();
+            lblNroSubtotal.Text = acumuladorSubtotal.ToString("#.##");
             ActualizarInventario();
         }
 
@@ -189,7 +189,7 @@ namespace KwikEMart
             ActualizarInventario();
             ActualizarCarrito();
             acumuladorSubtotal = 0.00;
-            lblNroSubtotal.Text = acumuladorSubtotal.ToString();
+            lblNroSubtotal.Text = acumuladorSubtotal.ToString("#.##");
 
             }
         }
@@ -204,7 +204,7 @@ namespace KwikEMart
                 ListViewItem item = new ListViewItem(producto.NroProducto.ToString());
                 item.SubItems.Add(producto.Descripcion);
                 item.SubItems.Add(producto.Cantidad.ToString());
-                item.SubItems.Add(producto.Subtotal.ToString());
+                item.SubItems.Add(producto.Subtotal.ToString("#.##"));
 
                 lstCarrito.Items.Add(item);
             }
