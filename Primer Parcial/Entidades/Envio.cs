@@ -51,5 +51,13 @@ namespace Entidades
             }
 
         }
+
+        public string NombreResponsable
+        {
+            get
+            {
+                return nombreResponsable;
+            }
+        }
     }
 }

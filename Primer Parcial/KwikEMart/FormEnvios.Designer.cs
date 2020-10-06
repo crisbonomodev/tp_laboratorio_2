@@ -50,7 +50,7 @@
             this.dgvRetiraEnLocal.ReadOnly = true;
             this.dgvRetiraEnLocal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRetiraEnLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRetiraEnLocal.Size = new System.Drawing.Size(776, 180);
+            this.dgvRetiraEnLocal.Size = new System.Drawing.Size(760, 180);
             this.dgvRetiraEnLocal.TabIndex = 0;
             // 
             // dgvEnviosADomicilio
@@ -66,7 +66,7 @@
             this.dgvEnviosADomicilio.ReadOnly = true;
             this.dgvEnviosADomicilio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEnviosADomicilio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEnviosADomicilio.Size = new System.Drawing.Size(776, 180);
+            this.dgvEnviosADomicilio.Size = new System.Drawing.Size(760, 180);
             this.dgvEnviosADomicilio.TabIndex = 1;
             // 
             // lblDomicilio
@@ -92,13 +92,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.lblLocal);
             this.Controls.Add(this.lblDomicilio);
             this.Controls.Add(this.dgvEnviosADomicilio);
             this.Controls.Add(this.dgvRetiraEnLocal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "FormEnvios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kwik-E-Mart - Envios";
             this.Load += new System.EventHandler(this.FormEnvios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetiraEnLocal)).EndInit();

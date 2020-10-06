@@ -48,13 +48,13 @@ namespace KwikEMart
 
         private void btnRealizarCompra_Click(object sender, EventArgs e)
         {
-            if (cmbClientes.SelectedItem == null || txtPersonaResponsable.Text == null)
+            if (cmbClientes.SelectedItem == null || txtPersonaResponsable.Text == "")
             {
                 MessageBox.Show("Revise los datos faltantes.");
             }
             else
             {
-                if (cmbEnvio.SelectedIndex == 0 && (txtCalle.Text == null || txtAltura.Text == null))
+                if (cmbEnvio.SelectedIndex == 0 && (txtCalle.Text == "" || txtAltura.Text == ""))
                 {
                     MessageBox.Show("Revise los datos faltantes.");
                 }
@@ -70,7 +70,9 @@ namespace KwikEMart
                     sw.WriteLine("---------------------------");
                     sw.WriteLine($"{fechaHora}");
                     sw.WriteLine("---------------------------");
-                    sw.WriteLine($"Cliente Nro{idCliente}");
+                    sw.WriteLine($"Usted ha sido atendido por: {lblDataNombreVendedor.Text} {lblDataApellidoVendedor.Text}");
+                    sw.WriteLine("---------------------------");
+                    sw.WriteLine($"Cliente: {cmbClientes.SelectedItem.ToString()}");
                     sw.WriteLine("---------------------------");
                     sw.WriteLine("Producto Nro Descripcion Cantidad PrecioU Subtotal");
                     foreach (Producto item in Comercio.Carrito)
@@ -157,19 +159,23 @@ namespace KwikEMart
 
         private void cmbEnvio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtPersonaResponsable.Text = cmbClientes.SelectedItem.ToString();
             if (cmbEnvio.SelectedIndex == 0)
             {
                 envio = 100;
-                lblEnvio.Text = "Recibe:";
+
+                lblPersonaResponsable.Text = "Recibe:";
                 txtCalle.Enabled = true;
                 txtAltura.Enabled = true;
+                txtPersonaResponsable.Enabled = true;
             }
             else
             {
-                lblEnvio.Text = "Retira:";
+                lblPersonaResponsable.Text = "Retira:";
                 envio = 0;
                 txtCalle.Enabled = false;
                 txtAltura.Enabled = false;
+                txtPersonaResponsable.Enabled = false;
             }
             CalcularTotal();
             lblEnvioData.Text = envio.ToString();
