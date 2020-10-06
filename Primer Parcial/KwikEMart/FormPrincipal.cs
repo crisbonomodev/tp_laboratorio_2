@@ -127,6 +127,7 @@ namespace KwikEMart
             {
             FormFinalizarCompra formFinalizarCompra = new FormFinalizarCompra();
             formFinalizarCompra.ShowDialog();
+                LimpiarCarrito();
             CargarInventario();
             
             }
