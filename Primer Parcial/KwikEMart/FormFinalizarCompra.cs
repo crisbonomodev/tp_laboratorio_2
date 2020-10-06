@@ -85,23 +85,21 @@ namespace KwikEMart
                             nroEnvio = Comercio.EnvioADomicilio.Count;
                             EnvioADomicilio aDomicilio = new EnvioADomicilio(nroEnvio, nroCompra, txtPersonaResponsable.Text, txtCalle.Text, int.Parse(txtAltura.Text),envio);
                             Comercio.AgregarEnvioDomicilio(aDomicilio);
-                            sw.WriteLine($"Envio: {envio}");
                             sw.WriteLine(aDomicilio.ObtenerEnvio());
                         break;
                     case 1:
                             nroEnvio = Comercio.EnvioRetLocal.Count;
                             EnvioRetLocal retiraEnLocal = new EnvioRetLocal(nroEnvio, nroCompra, txtPersonaResponsable.Text);
                             Comercio.AgregarRetiroEnLocal(retiraEnLocal);
-                            sw.WriteLine($"Envio: {envio}");
                             sw.WriteLine(retiraEnLocal.ObtenerEnvio());
                             break;
                     default:
                         break;
                 }
                     sw.WriteLine("---------------------------");
-                    sw.WriteLine($"Subtotal: {subTotal}");
-                    sw.WriteLine($"Descuentos: {descuento}");
-                    sw.WriteLine($"Total: {total}");
+                    sw.WriteLine($"Subtotal: {subTotal.ToString("#.##")}");
+                    sw.WriteLine($"Descuentos: {descuento.ToString("#.##")}");
+                    sw.WriteLine($"Total: {total.ToString("#.##")}");
                     sw.WriteLine("---------------------------");
                     sw.WriteLine("Gracias, vuelva prontossss!");
                     sw.WriteLine("---------------------------");
