@@ -1,0 +1,16 @@
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Consola.exe.config
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Consola.exe
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Consola.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Archivos.dll
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Clases Abstractas.dll
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Clases Instanciables.dll
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Excepciones.dll
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Archivos.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Clases Abstractas.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Clases Instanciables.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\bin\Debug\Excepciones.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\obj\Debug\Consola.csprojAssemblyReference.cache
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\obj\Debug\Consola.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\obj\Debug\Consola.csproj.CopyComplete
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\obj\Debug\Consola.exe
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP3\Consola\obj\Debug\Consola.pdb

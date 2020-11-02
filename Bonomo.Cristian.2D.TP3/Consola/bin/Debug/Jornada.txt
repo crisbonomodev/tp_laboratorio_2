@@ -1,0 +1,110 @@
+JORNADA:
+CLASE DE: Programacion POR LEGAJO: 1
+
+CLASES DEL DIA: Programacion
+Programacion
+
+
+ALUMNOS:
+LEGAJO: 1
+
+TOMA CLASE DE:Programacion
+ESTADO DE CUENTA: Becado
+
+LEGAJO: 5
+
+TOMA CLASE DE:Programacion
+ESTADO DE CUENTA: AlDia
+
+
+JORNADA:
+CLASE DE: Programacion POR NOMBRE COMPLETO:Juarez,Roberto 
+
+NACIONALIDAD:Argentino
+
+
+LEGAJO: 2
+
+CLASES DEL DIA: Legislacion
+Programacion
+
+
+ALUMNOS:
+NOMBRE COMPLETO:Lopez,Juan 
+
+NACIONALIDAD:Argentino
+
+
+LEGAJO: 1
+
+TOMA CLASE DE:Programacion
+ESTADO DE CUENTA: Becado
+
+NOMBRE COMPLETO:Gonzalez,Carlos 
+
+NACIONALIDAD:Argentino
+
+
+LEGAJO: 5
+
+TOMA CLASE DE:Programacion
+ESTADO DE CUENTA: AlDia
+
+
+JORNADA:
+CLASE DE: Programacion POR NOMBRE COMPLETO:Juarez,Roberto
+NACIONALIDAD:Argentino
+
+LEGAJO: 2
+
+CLASES DEL DIA: Programacion
+Programacion
+
+
+ALUMNOS:
+NOMBRE COMPLETO:Lopez,Juan
+NACIONALIDAD:Argentino
+
+LEGAJO: 1
+
+TOMA CLASE DE:Programacion
+ESTADO DE CUENTA: Becado
+
+NOMBRE COMPLETO:Gonzalez,Carlos
+NACIONALIDAD:Argentino
+
+LEGAJO: 5
+
+TOMA CLASE DE:Programacion
+ESTADO DE CUENTA: AlDia
+
+
+JORNADA:
+CLASE DE: Programacion POR NOMBRE COMPLETO:Lopez,Juan
+NACIONALIDAD:Argentino
+
+LEGAJO: 1
+
+CLASES DEL DIA: 
+Laboratorio
+Programacion
+
+
+ALUMNOS:
+NOMBRE COMPLETO:Lopez,Juan
+NACIONALIDAD:Argentino
+
+LEGAJO: 1
+
+ESTADO DE CUENTA: Becado
+TOMA CLASE DE:Programacion
+
+NOMBRE COMPLETO:Gonzalez,Carlos
+NACIONALIDAD:Argentino
+
+LEGAJO: 5
+
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE:Programacion
+
+
