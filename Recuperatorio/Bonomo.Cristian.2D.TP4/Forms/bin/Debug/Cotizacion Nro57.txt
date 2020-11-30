@@ -1,0 +1,11 @@
+Casa de Cambio - Recibo X - Cotizacion Nro 57 
+---------------------------
+11/28/2020 2:02:04 PM
+---------------------------
+Divisa a cotizar: Dolar
+---------------------------
+Monto:100 
+Tipo de operacion:Venta
+Valor: 152.00
+Cotización: 15200
+---------------------------

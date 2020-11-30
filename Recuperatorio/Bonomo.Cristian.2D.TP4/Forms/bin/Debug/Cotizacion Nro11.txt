@@ -1,0 +1,11 @@
+Casa de Cambio - Recibo X - Cotizacion Nro 11 
+---------------------------
+11/27/2020 5:15:46 PM
+---------------------------
+Divisa a cotizar: Euro
+---------------------------
+Monto:100 
+Tipo de operacion:Venta
+Valor: 180.73
+Cotización: 18073
+---------------------------

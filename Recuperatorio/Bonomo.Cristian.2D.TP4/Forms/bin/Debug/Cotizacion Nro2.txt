@@ -1,0 +1,11 @@
+Casa de Cambio - Recibo X - Cotizacion Nro 2 
+---------------------------
+11/30/2020 9:52:20 AM
+---------------------------
+Divisa a cotizar: Dolar
+---------------------------
+Monto:1000 
+Tipo de operacion:Compra
+Valor: 158.00
+Cotización: 6.33
+---------------------------

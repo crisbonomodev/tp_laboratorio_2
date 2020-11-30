@@ -1,0 +1,14 @@
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\bin\Debug\Forms.exe.config
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\bin\Debug\Forms.exe
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\bin\Debug\Forms.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.csprojAssemblyReference.cache
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.Properties.Resources.resources
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.csproj.GenerateResource.cache
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.exe
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\bin\Debug\Entidades.dll
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\bin\Debug\Entidades.pdb
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.csproj.CopyComplete
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.frmPrincipal.resources
+C:\Users\Cristian\source\repos\Bonomo.Cristian.2D.TP4\Forms\obj\Debug\Forms.frmCotizacion.resources
